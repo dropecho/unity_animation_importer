@@ -27,3 +27,7 @@ You can then later, click the button in the project settings menu to re-apply al
 The "base avatar" is a animation that is used for the avatar for all other animations in the given path, I would recommend downloading the t-pose from mixamo and using that in the root of the chosen path dir.
 
 ![image](https://user-images.githubusercontent.com/316782/137644122-a2580c57-d77b-429c-8068-39705e61ca36.png)
+
+## Example
+
+![example](https://user-images.githubusercontent.com/316782/137644347-d60ced75-fc6d-4ac2-bb23-c4670e0559d2.gif)
