@@ -7,7 +7,7 @@ namespace Dropecho {
     void OnPreprocessModel() {
       var importerSettings = MixamoAnimationImporterSettings.GetSettings();
 
-      if (importerSettings == null || !assetPath.Contains(importerSettings.basePath) || !assetImporter.importSettingsMissing) {
+      if (importerSettings == null || string.IsNullOrWhiteSpace(importerSettings.basePath) || !assetPath.Contains(importerSettings.basePath) || !assetImporter.importSettingsMissing) {
         return;
       }
 
