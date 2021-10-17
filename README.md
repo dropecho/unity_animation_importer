@@ -1,5 +1,8 @@
 ## Quickstart
 
+Look at usage below.
+
+## Install
 To use this, install it through the package manager.
 
 You can click on the code button in the top right, copy that or just copy this 
@@ -13,3 +16,12 @@ Open unity, and open the package manager, in the dropdown select install from gi
 
 It should then show up in the list of installed packages  
 ![image](https://user-images.githubusercontent.com/316782/137644044-db040f69-27aa-476c-ac6b-cea32bae5315.png)
+
+
+## Usage
+
+There are two ways this is used, on initial import, the animations within the defined base path are setup using the settings found in the project settings menu.
+
+You can then later, click the button in the project settings menu to re-apply all settings to the animations that have been imported / fall under the path chosen.
+
+![image](https://user-images.githubusercontent.com/316782/137644122-a2580c57-d77b-429c-8068-39705e61ca36.png)
