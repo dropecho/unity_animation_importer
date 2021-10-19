@@ -30,8 +30,8 @@ The "base avatar" is a animation that is used for the avatar for all other anima
 
 ## Example
 
-Folder Structure:
+Folder Structure:  
 ![image](https://user-images.githubusercontent.com/316782/137998216-49469e3f-8be2-4879-b0ab-e4a2e309ef96.png)
 
-Settings / Usage:
+Settings / Usage:  
 ![example](https://user-images.githubusercontent.com/316782/137644347-d60ced75-fc6d-4ac2-bb23-c4670e0559d2.gif)
