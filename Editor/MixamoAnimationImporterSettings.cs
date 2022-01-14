@@ -22,12 +22,11 @@ namespace Dropecho {
     [SerializeField] public bool renameAnimationClipsToMatchAssetName = true;
     [SerializeField] public bool replaceSpacesWithUnderscores = false;
 
-
     // Animation Specific Settings
     // [SerializeField] public bool importVisibility = false;
 
     internal static MixamoAnimationImporterSettings GetSettings() {
-      return AssetDatabase.LoadAssetAtPath<MixamoAnimationImporterSettings>(SettingsPath);
+        return AssetDatabase.LoadAssetAtPath<MixamoAnimationImporterSettings>(SettingsPath);
     }
 
     internal static MixamoAnimationImporterSettings GetOrCreateSettings() {
