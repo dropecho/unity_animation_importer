@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 using System.IO;
@@ -39,11 +40,13 @@ namespace Dropecho {
     }
 
     void OnPreprocessAnimation() {
-      if (!assetPath.Contains("Animations/Mixamo") || !assetImporter.importSettingsMissing) {
+      var importerSettings = MixamoAnimationImporterSettings.GetSettings();
+
+      if (importerSettings == null || string.IsNullOrWhiteSpace(importerSettings.basePath) || !assetPath.Contains(importerSettings.basePath) || !assetImporter.importSettingsMissing) {
         return;
       }
 
-      ModelImporter modelImporter = assetImporter as ModelImporter;
+      importAnimationClips(assetImporter as ModelImporter, importerSettings);
     }
 
     internal static void importAnimationClips(ModelImporter modelImporter, MixamoAnimationImporterSettings settings) {
@@ -66,7 +69,9 @@ namespace Dropecho {
         if (settings.replaceSpacesWithUnderscores) {
           clip.name = clip.name.Replace(" ", "_");
         }
-        clip.loopTime = true;
+        Debug.Log("wee:" + clip.loop);
+        Debug.Log("wee:" + clip.loopTime);
+        // clip.loopTime = true;
       }
 
       //Assign modiffied clip names back to modelImporter
@@ -76,5 +81,5 @@ namespace Dropecho {
       modelImporter.SaveAndReimport();
     }
   }
-
 }
+#endif

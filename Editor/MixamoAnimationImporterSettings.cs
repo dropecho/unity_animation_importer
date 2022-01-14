@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEngine;
 
@@ -32,6 +33,9 @@ namespace Dropecho {
     internal static MixamoAnimationImporterSettings GetOrCreateSettings() {
       var settings = AssetDatabase.LoadAssetAtPath<MixamoAnimationImporterSettings>(SettingsPath);
       if (settings == null) {
+        if(!AssetDatabase.IsValidFolder("Assets/Settings")) {
+          AssetDatabase.CreateFolder("Assets", "Settings");
+        }
         settings = ScriptableObject.CreateInstance<MixamoAnimationImporterSettings>();
         AssetDatabase.CreateAsset(settings, SettingsPath);
         AssetDatabase.SaveAssets();
@@ -44,3 +48,5 @@ namespace Dropecho {
     }
   }
 }
+
+#endif
