@@ -1,8 +1,10 @@
 {
-    "name": "com.dropecho.mixamo_auto_importer.editor",
-    "rootNamespace": "",
+    "name": "com.dropecho.mixamo_auto_importer.Editor",
+    "rootNamespace": "Dropecho",
     "references": [],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

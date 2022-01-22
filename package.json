@@ -3,7 +3,10 @@
     "displayName": "Mixamo Auto Importer",
     "version": "0.1.0",
     "description": "A utility to automatically import mixamo animations. \nLook in project settings / Dropecho / Mixamo Animation Importer for options.",
-    "author": "Dropecho <vantreeseba@gmail.com>",
+    "author": {
+        "name": "Dropecho",
+        "email": "vantreeseba@gmail.com"
+    },
     "repository": "github:dropecho/unity_mixamo_auto_importer",
     "license": "MIT",
     "unity": "2019.1",

@@ -26,13 +26,13 @@ namespace Dropecho {
     // [SerializeField] public bool importVisibility = false;
 
     internal static MixamoAnimationImporterSettings GetSettings() {
-        return AssetDatabase.LoadAssetAtPath<MixamoAnimationImporterSettings>(SettingsPath);
+      return AssetDatabase.LoadAssetAtPath<MixamoAnimationImporterSettings>(SettingsPath);
     }
 
     internal static MixamoAnimationImporterSettings GetOrCreateSettings() {
       var settings = AssetDatabase.LoadAssetAtPath<MixamoAnimationImporterSettings>(SettingsPath);
       if (settings == null) {
-        if(!AssetDatabase.IsValidFolder("Assets/Settings")) {
+        if (!AssetDatabase.IsValidFolder("Assets/Settings")) {
           AssetDatabase.CreateFolder("Assets", "Settings");
         }
         settings = ScriptableObject.CreateInstance<MixamoAnimationImporterSettings>();
