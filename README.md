@@ -24,7 +24,10 @@ There are two ways this is used, on initial import, the animations within the de
 
 You can then later, click the button in the project settings menu to re-apply all settings to the animations that have been imported / fall under the path chosen.
 
-The "base avatar" is a animation that is used for the avatar for all other animations in the given path, I would recommend downloading the t-pose from mixamo and using that in the root of the chosen path dir.
+The "base avatar" is a animation that is used for the avatar for all other animations in the given path.
+
+When using mixamo I would recommend downloading the t-pose and using that in the root of the chosen path dir.
+Otherwise, just choose the "rig/model" that represents the rig used for the creation of all the animations in the folder.
 
 ![image](https://user-images.githubusercontent.com/316782/137644122-a2580c57-d77b-429c-8068-39705e61ca36.png)
 
