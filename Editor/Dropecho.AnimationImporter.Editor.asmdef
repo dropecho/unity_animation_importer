@@ -1,6 +1,6 @@
 {
-    "name": "com.dropecho.mixamo_auto_importer.Editor",
-    "rootNamespace": "Dropecho",
+    "name": "Dropecho.AnimationImporter.Editor",
+    "rootNamespace": "",
     "references": [],
     "includePlatforms": [
         "Editor"

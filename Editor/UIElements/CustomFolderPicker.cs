@@ -1,40 +1,38 @@
+using System.IO;
 using UnityEditor;
-using UnityEditor.UIElements;
-using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Dropecho {
-  static class AnimationImporterSettingsProvider {
-    private static string[] animsInFolder = new string[] { };
+namespace Dropecho
+{
+    class CustomFolderPicker : VisualElement, INotifyValueChanged<string> {
+    private TextField _textField;
 
-    [SettingsProvider]
-    public static SettingsProvider CreateAnimationImporterSettingsProvider() {
-      var provider = new SettingsProvider("Project/Dropecho/AnimationImporterSettings", SettingsScope.Project, new[] { "Animation" }) {
-        label = "Animation Importer Settings",
-
-        // activateHandler is called when the user clicks on the Settings item in the Settings window.
-        activateHandler = (searchContext, rootElement) => {
-          BuildGUI(rootElement);
-        }
-      };
-
-      return provider;
+    public string value {
+      get { return _textField.value; }
+      set { _textField.value = value; }
     }
 
-    static void BuildGUI(VisualElement rootElement) {
-      var settings = AnimationImporterSettings.GetOrCreateSettings();
-      rootElement.Add(new SettingsElement(settings));
+    public void SetValueWithoutNotify(string newValue) {
+      _textField.SetValueWithoutNotify(newValue);
     }
-  }
 
-  static class VisualElementExtensions {
-    public static T FluentBind<T>(this T el, SerializedObject obj) where T : VisualElement, IBindable {
-      el.Bind(obj);
-      return el;
+    public CustomFolderPicker(string label = "") : base() {
+      _textField = new TextField(label);
+      this.Add(_textField);
+      var openDirPickerButton = new Button(OpenFolderPicker) { text = "..." };
+      this.Add(openDirPickerButton);
+
+      _textField.style.flexGrow = 1;
+      openDirPickerButton.style.flexGrow = 0;
+      this.style.flexDirection = FlexDirection.Row;
     }
-    public static T FluentBindProperty<T>(this T el, SerializedProperty prop) where T : VisualElement, IBindable {
-      el.BindProperty(prop);
-      return el;
+
+    void OpenFolderPicker() {
+      var path = EditorUtility.OpenFolderPanel("", string.IsNullOrWhiteSpace(value) ? "Assets" : value, "");
+      if (!string.IsNullOrWhiteSpace(path)) {
+        value = Path.GetRelativePath(Directory.GetCurrentDirectory(), path).Replace("\\", "/");
+      }
+      this.Blur();
     }
   }
 }

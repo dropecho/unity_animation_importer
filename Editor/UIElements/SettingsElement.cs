@@ -98,7 +98,7 @@ namespace Dropecho {
     private VisualElement makeDirectoryElement() {
       var container = new VisualElement() {
         style = {
-        flexDirection = FlexDirection.Row, alignItems = Align.Center, justifyContent = Justify.SpaceBetween ,
+        flexDirection = FlexDirection.Row, alignItems = Align.Center, justifyContent = Justify.SpaceBetween,
         paddingLeft = 5, paddingRight = 5
 
       }

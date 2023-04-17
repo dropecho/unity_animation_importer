@@ -1,8 +1,8 @@
 {
-    "name": "com.dropecho.mixamo_auto_importer",
-    "displayName": "Mixamo Auto Importer",
+    "name": "com.dropecho.animation_importer",
+    "displayName": "Dropecho Animation Importer",
     "version": "0.1.0",
-    "description": "A utility to automatically import mixamo animations. \nLook in project settings / Dropecho / Mixamo Animation Importer for options.",
+    "description": "A utility to automatically import animations. \nLook in project settings / Dropecho / Animation Importer for options.",
     "author": {
         "name": "Dropecho",
         "email": "vantreeseba@gmail.com"

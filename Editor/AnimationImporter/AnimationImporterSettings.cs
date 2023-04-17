@@ -24,7 +24,7 @@ namespace Dropecho {
 
   // Create a new type of Settings Asset.
   class AnimationImporterSettings : ScriptableObject {
-    public static readonly string SettingsPath = "Assets/Settings/MixamoAnimationImporterSettings.asset";
+    public static readonly string SettingsPath = "Assets/Settings/DropechoAnimationImporterSettings.asset";
     public List<AnimationImporterDirectorySettings> directories = new();
 
     internal static AnimationImporterSettings GetSettings() {
