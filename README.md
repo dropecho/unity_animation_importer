@@ -6,7 +6,7 @@ Look at usage below.
 To use this, install it through the package manager.
 
 You can click on the code button in the top right, copy that or just copy this 
-```git@github.com:dropecho/unity_mixamo_auto_importer.git```
+```git@github.com:dropecho/unity_animation_importer.git```
 
 Open unity, and open the package manager, in the dropdown select install from git, and paste that in.
 
