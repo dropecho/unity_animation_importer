@@ -6,7 +6,7 @@ Look at usage below.
 To use this, install it through the package manager.
 
 You can click on the code button in the top right, copy that or just copy this 
-```git@github.com:dropecho/unity_mixamo_auto_importer.git```
+```git@github.com:dropecho/unity_animation_importer.git```
 
 Open unity, and open the package manager, in the dropdown select install from git, and paste that in.
 
@@ -24,7 +24,10 @@ There are two ways this is used, on initial import, the animations within the de
 
 You can then later, click the button in the project settings menu to re-apply all settings to the animations that have been imported / fall under the path chosen.
 
-The "base avatar" is a animation that is used for the avatar for all other animations in the given path, I would recommend downloading the t-pose from mixamo and using that in the root of the chosen path dir.
+The "base avatar" is a animation that is used for the avatar for all other animations in the given path.
+
+When using mixamo I would recommend downloading the t-pose and using that in the root of the chosen path dir.
+Otherwise, just choose the "rig/model" that represents the rig used for the creation of all the animations in the folder.
 
 ![image](https://user-images.githubusercontent.com/316782/137644122-a2580c57-d77b-429c-8068-39705e61ca36.png)
 
