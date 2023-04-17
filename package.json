@@ -7,7 +7,7 @@
         "name": "Dropecho",
         "email": "vantreeseba@gmail.com"
     },
-    "repository": "github:dropecho/unity_mixamo_auto_importer",
+    "repository": "github:dropecho/unity_animation_importer",
     "license": "MIT",
     "unity": "2019.1",
     "unityRelease": "0b5",
